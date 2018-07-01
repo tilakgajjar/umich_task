@@ -4,10 +4,12 @@
  *
  */
 
-import { DEFAULT_ACTION } from "./constants";
+import { UPDATE_YEAR } from "./constants";
 
-export function defaultAction() {
+export function updateYear(value) {
   return {
-    type: DEFAULT_ACTION
+    type: UPDATE_YEAR,
+    value
   };
 }
+

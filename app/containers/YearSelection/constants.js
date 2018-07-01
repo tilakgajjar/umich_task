@@ -4,4 +4,4 @@
  *
  */
 
-export const DEFAULT_ACTION = "app/YearSelection/DEFAULT_ACTION";
+export const UPDATE_YEAR = "app/YearSelection/UPDATE_YEAR";

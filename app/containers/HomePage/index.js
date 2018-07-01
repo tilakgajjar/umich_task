@@ -12,16 +12,39 @@
 import React from 'react'
 import BarPlot from 'containers/BarPlot/Loadable'
 import YearSelection from 'containers/YearSelection/Loadable'
+import DownloadSvg from 'containers/DownloadSvg/Loadable'
+import { Segment, Grid, Divider } from 'semantic-ui-react';
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
-  render() {
 
+  render() {
     return (
       <div>
-        <YearSelection />
-        <BarPlot />
-      </div>
+        <Divider horizontal style={{ marginTop: '2em' }}>
+          University of Michigan - Task
+          </Divider>
+        <Segment style={{ marginTop: '4em' }}>
+          <Grid>
+            <Grid.Row>
+              <Grid.Column width={3}>
+                <Grid textAlign="center">
+                  <Grid.Row>
+                    <DownloadSvg plotId="barplot" />
+                  </Grid.Row>
+                  <Divider fitted style={{ marginTop: '10%' }} />
+                  <Grid.Row>
+                    <YearSelection />
+                  </Grid.Row>
+                </Grid>
+              </Grid.Column>
+              <Grid.Column width={13}>
+                <BarPlot />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
+      </div >
     )
   }
 }
